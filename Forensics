@@ -1,0 +1,46 @@
+Forensics Checklist 
+
+// strings  - to check for strings in a file. Including metadata
+code: $ string filename 
+
+//  binwalk - to extract any hidden file. 
+code: $ binwalk -e filename
+code: $ binwalk --dd='.*' filename
+
+// Edit file header
+code: $ hexeditor filename
+
+// For Iso file,
+    Extract with 7zip
+    Mount in kali linux 
+          code: $ mkdir newfolder/path
+                $ sudo mount path/of/image.iso newfolder/path -o loop
+                      
+// Reverse engeering executables linux,
+    gdb(peda)
+        From terminal 
+              code: $ gdb file 
+        Running the program 
+              code: $ run or $ r
+        Check for all program sequence and list binary number  
+              code: $ disas main
+        Check for info register 
+              code: $ info register or $i r
+        Set program to be run one by one, "$ continue" will let the program to run normally.
+              code: $ break main
+        Scroll down program one by one
+              code: $ next 
+        Continue program
+              code: $ continue (continue after set $rip to get the flag)
+        Set next program to run, this process can skip any sequential program.
+              code: $ set $rip binarynumber
+              
+  // set the correct binary number to skip any process to the selected process.
+ 
+Stegosuite
+     Program to extract stego images with kali linux
+  
+ 
+  
+  
+         

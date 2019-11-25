@@ -17,6 +17,8 @@ code: $ hexeditor filename
                 $ sudo mount path/of/image.iso newfolder/path -o loop
                       
 // Reverse engeering executables linux,
+    IDA pro/free 
+       Load file into IDA and Open Binary 
     gdb(peda)
         From terminal 
               code: $ gdb file 
